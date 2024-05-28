@@ -3,7 +3,7 @@ import express from "express";
 const router = express.Router();
 
 // Define the Recipe type
-type Recipe = {
+export type Recipe = {
   name: string;
   author: string;
   nrOfIngredients: number;
@@ -84,6 +84,30 @@ const recipesData: Recipe[] = [
     cookingTime: 60,
     preparationTime: 90,
   },
+  {
+    id: 3,
+    name: "Florin",
+    author: "Aasaharu Morimoto",
+    nrOfIngredients: 10,
+    ingredients: [
+      "sushi rice",
+      "nori sheets",
+      "cucumber",
+      "avocado",
+      "crab meat",
+      "salmon",
+      "tuna",
+      "soy sauce",
+      "wasabi",
+      "pickled ginger",
+    ],
+    difficulty: "Expert",
+    description:
+      "A variety of sushi rolls made with fresh fish, vegetables, and seasoned sushi rice.",
+    cookingTime: 60,
+    preparationTime: 90,
+  },
+
 ];
 
 // GET /api/recipes
